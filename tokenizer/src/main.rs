@@ -34,7 +34,6 @@ fn main()
         .stderr(stderr)  // Redirect stderr to `/tmp/daemon.err`.
         .privileged_action(|| "Executed before drop privileges");
 
-    println!("pid_file {:#?}", pid_file);
     match pid_file
     {
         Ok(_) => {
