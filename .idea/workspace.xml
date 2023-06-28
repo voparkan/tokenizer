@@ -5,13 +5,17 @@
   </component>
   <component name="CargoProjects">
     <cargoProject FILE="$PROJECT_DIR$/../../Rust Playground/demoportal-api-test/Cargo.toml" />
+    <cargoProject FILE="$PROJECT_DIR$/tokenizer/src/btl_support/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d7350be7-3ebd-4143-8e78-a2df514cd532" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="d7350be7-3ebd-4143-8e78-a2df514cd532" name="Changes" comment="starting of implementation of btleplug with tokio">
+      <change afterPath="$PROJECT_DIR$/tokenizer/src/btl_support/mod.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tokenizer/src/lib.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tokenizer/src/btl_support/find_btl_device.rs" beforeDir="false" afterPath="$PROJECT_DIR$/tokenizer/src/btl_support/find_btl_device.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tokenizer/src/btl_support/system_support_btl.rs" beforeDir="false" afterPath="$PROJECT_DIR$/tokenizer/src/btl_support/system_support_btl.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tokenizer/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/tokenizer/src/main.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +24,20 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SET_USER_NAME_GLOBALLY" value="false" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="22756b56-6ee7-4880-83d5-eaa6637e2b28" />
+        <option name="url" value="https://github.com/voparkan/tokenizer.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="1jf9x7pa" />
@@ -34,6 +52,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -41,9 +60,17 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "org.rust.cargo.project.model.PROJECT_DISCOVERY": "true",
+    "org.rust.disableDetachedFileInspection/Users/vojtechparkan/Projects/RustProjects/tokenizer/tokenizer/src/btl_support/find_btl_device.rs": "true",
+    "org.rust.disableDetachedFileInspection/Users/vojtechparkan/Projects/RustProjects/tokenizer/tokenizer/src/btl_support/mod.rs": "true",
+    "org.rust.disableDetachedFileInspection/Users/vojtechparkan/Projects/RustProjects/tokenizer/tokenizer/src/btl_support/system_support_btl.rs": "true",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tokenizer/src/btl_support" />
+    </key>
+  </component>
   <component name="RustProjectSettings">
     <option name="toolchainHomeDirectory" value="$USER_HOME$/.cargo/bin" />
   </component>
@@ -55,11 +82,85 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1687646784943</updated>
-      <workItem from="1687646786100" duration="7716000" />
+      <workItem from="1687646786100" duration="28872000" />
     </task>
+    <task id="LOCAL-00001" summary="first daemon - needs to implement Option&lt;PathBuf&gt; to String">
+      <created>1687655117480</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1687655117480</updated>
+    </task>
+    <task id="LOCAL-00002" summary="gitignore">
+      <created>1687655271658</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1687655271658</updated>
+    </task>
+    <task id="LOCAL-00003" summary="gitignore">
+      <created>1687915639230</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1687915639236</updated>
+    </task>
+    <task id="LOCAL-00004" summary="gitignore">
+      <created>1687915662775</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1687915662776</updated>
+    </task>
+    <task id="LOCAL-00005" summary="gitignore">
+      <created>1687950707331</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1687950707331</updated>
+    </task>
+    <task id="LOCAL-00006" summary="gitignore">
+      <created>1687950768272</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1687950768272</updated>
+    </task>
+    <task id="LOCAL-00007" summary="workspace xml">
+      <created>1687951529010</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1687951529010</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first daemon - needs to implement Option&lt;PathBuf&gt; to String" />
+    <MESSAGE value="gitignore" />
+    <MESSAGE value="workspace xml" />
+    <MESSAGE value="starting of implementation of btleplug with tokio" />
+    <option name="LAST_COMMIT_MESSAGE" value="starting of implementation of btleplug with tokio" />
   </component>
 </project>
