@@ -6,5 +6,8 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+btleplug = "0.10.5"
 daemonize = "0.5.0"
 dirs = "5.0.1"
+tokio = { version = "1", features = ["full"] }
+mini-redis = "0.4"
