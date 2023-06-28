@@ -8,10 +8,7 @@
     <cargoProject FILE="$PROJECT_DIR$/tokenizer/src/btl_support/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d7350be7-3ebd-4143-8e78-a2df514cd532" name="Changes" comment="gitignore">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tokenizer/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/tokenizer/src/main.rs" afterDir="false" />
-    </list>
+    <list default="true" id="d7350be7-3ebd-4143-8e78-a2df514cd532" name="Changes" comment="gitignore" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -61,7 +58,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1687646784943</updated>
-      <workItem from="1687646786100" duration="23310000" />
+      <workItem from="1687646786100" duration="23778000" />
     </task>
     <task id="LOCAL-00001" summary="first daemon - needs to implement Option&lt;PathBuf&gt; to String">
       <created>1687655117480</created>
@@ -91,7 +88,21 @@
       <option name="project" value="LOCAL" />
       <updated>1687915662776</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="gitignore">
+      <created>1687950707331</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1687950707331</updated>
+    </task>
+    <task id="LOCAL-00006" summary="gitignore">
+      <created>1687950768272</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1687950768272</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
