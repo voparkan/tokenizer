@@ -8,10 +8,13 @@ extern crate dirs;
 use daemonize::Daemonize;
 use std::path::Path;
 use std::fs::File;
+use std::time::Instant;
+use std::{thread, time};
 
 fn main()
 {
     let run = true;
+    let loop_duration = time::Duration::from_millis(8000);
     let home_dir = dirs::data_dir().expect("REASON");
     let home_dir_path = Path::new(&home_dir);
     let tokenizer_path = home_dir_path.join("tokenizer");
@@ -39,9 +42,9 @@ fn main()
         Ok(_) => {
             match tokenizer.start() {
                 Ok(ok) => {
-                    eprintln!("TOKENIZER! \n\nHome directory: {}  \n\nPid file: {}", stdout_path.display(), ok);
+                    println!("TOKENIZER! \n\nHome directory: {}  \n\nStdout file: {}", stdout_path.display(), ok);
                 }
-                Err(e) => eprintln!("TOKENIZER! \n\nError: {} \ndir: {}", e, stderr_path.display()),
+                Err(e) => eprintln!("TOKENIZER! \n\nError: {} \nStderr file: {}", e, stderr_path.display()),
             }
         }
         Err(ref error) => {
@@ -49,6 +52,8 @@ fn main()
         }
     }
     while run {
-        
+        thread::sleep(loop_duration);
+        let now = Instant::now();
+        println!("TOKENIZER time: {:?}", now.elapsed());
     }
 }

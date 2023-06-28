@@ -61,7 +61,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1687646784943</updated>
-      <workItem from="1687646786100" duration="19827000" />
+      <workItem from="1687646786100" duration="23310000" />
     </task>
     <task id="LOCAL-00001" summary="first daemon - needs to implement Option&lt;PathBuf&gt; to String">
       <created>1687655117480</created>
@@ -77,7 +77,21 @@
       <option name="project" value="LOCAL" />
       <updated>1687655271658</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="gitignore">
+      <created>1687915639230</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1687915639236</updated>
+    </task>
+    <task id="LOCAL-00004" summary="gitignore">
+      <created>1687915662775</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1687915662776</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
