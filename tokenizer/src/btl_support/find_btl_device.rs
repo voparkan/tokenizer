@@ -20,7 +20,7 @@ pub async fn find_bluetooth_devices() {
 
     let devices = adapter.peripherals().await.unwrap();
     for device in devices {
-        println!("Found device: {}", device.properties().await.unwrap().local_name.unwrap_or_else(|| "(unknown)".to_owned()));
+        println!("Found device: {}", device.properties().await.unwrap().local_name().unwrap_or_else(|| "(unknown)".to_owned()));
     }
 
     adapter.stop_scan().await.unwrap();
