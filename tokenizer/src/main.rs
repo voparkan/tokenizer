@@ -14,7 +14,7 @@ pub mod btl_support;
 
 fn main()
 {
-    let run = true;
+    let mut run = true;
     let loop_duration = time::Duration::from_millis(8000);
     let home_dir = dirs::data_dir().expect("REASON");
     let home_dir_path = Path::new(&home_dir);
@@ -45,8 +45,15 @@ fn main()
                 Ok(ok) => {
                     println!("TOKENIZER! \n\nHome directory: {}  \n\nStdout file: {}", stdout_path.display(), ok);
                     let args: Vec<String> = std::env::args().collect();
-                    let exit_code = btl_support::system_support_btl::main_with_args(args.as_slice());
-                    println!("exit_code {:#?}", exit_code);
+                    let mut exit_code= 0;
+                    while run {
+                        exit_code = btl_support::system_support_btl::main_with_args(args.as_slice());
+                        if exit_code == 1 {
+                            run = false;
+                        } else {
+                            thread::sleep(loop_duration);
+                        }
+                    }
                     ::std::process::exit(exit_code);
                 }
                 Err(e) => eprintln!("TOKENIZER! \n\nError: {} \nStderr file: {}", e, stderr_path.display()),
@@ -55,11 +62,5 @@ fn main()
         Err(ref error) => {
             panic!("Enviroment not ready {} \ndir: {:#?}", error, pid_file);
         }
-    }
-    while run {
-        thread::sleep(loop_duration);
-        let now = Instant::now();
-        println!("TOKENIZER time: {:?}", now.elapsed());
-
     }
 }
