@@ -10,6 +10,7 @@ use std::path::Path;
 use std::fs::File;
 use std::time::Instant;
 use std::{thread, time};
+pub mod btl_support;
 
 fn main()
 {
@@ -44,7 +45,8 @@ fn main()
                 Ok(ok) => {
                     println!("TOKENIZER! \n\nHome directory: {}  \n\nStdout file: {}", stdout_path.display(), ok);
                     let args: Vec<String> = std::env::args().collect();
-                    let exit_code = system_support_btl::main_with_args(args.as_slice());
+                    let exit_code = btl_support::system_support_btl::main_with_args(args.as_slice());
+                    println!("exit_code {:#?}", exit_code);
                     ::std::process::exit(exit_code);
                 }
                 Err(e) => eprintln!("TOKENIZER! \n\nError: {} \nStderr file: {}", e, stderr_path.display()),
