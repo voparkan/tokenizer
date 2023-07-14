@@ -56,4 +56,4 @@ fn main()
         let now = Instant::now();
         println!("TOKENIZER time: {:?}", now.elapsed());
     }
-}<
+}
