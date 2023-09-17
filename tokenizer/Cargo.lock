@@ -1163,6 +1163,8 @@ dependencies = [
  "btleplug",
  "daemonize",
  "dirs",
+ "futures",
+ "futures-util",
  "mini-redis",
  "tokio",
 ]
